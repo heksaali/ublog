@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>μBlog</h2><br><br>
+<h3>List of blogs</h3>
+<hr>
+{% for post in object_list %}
+    <a href="{% url 'post-view' slug=post.slug %}">{{ post.created_at|date:"Y-m-d" }}: {{ post.title }}</a>
+    <hr />
+{% endfor %}
+{% endblock %}
