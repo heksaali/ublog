@@ -4,10 +4,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/styles.css' %}">
   <title>uBlog</title>
 </head>
 <body>
-{% block body %}
-{% endblock %}
+  <div id="container">
+      <div class="nav-items-wrapper">
+          <nav>
+              <div id="logo">
+                uBlog
+              </div>
+          </nav>
+      </div>
+      <div id="content">
+          {% block body %}
+          {% endblock %}
+      </div>
+  </div>
 </body>
+
 </html>
