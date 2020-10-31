@@ -4,7 +4,10 @@
 <h3>New post</h3>
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Send message">
+    <label for="title">{{ form.title.label }}</label>
+    {{ form.title }}
+    <label for="body">{{ form.body.label }}</label>
+    {{ form.body }}
+    <button type="submit" value="Send message">Submit</button>
 </form>
 {% endblock %}
