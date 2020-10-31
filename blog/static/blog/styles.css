@@ -1,16 +1,49 @@
-body,html{height:100%;margin:0;font-family:Roboto,sans-serif;color:#f0f7ee;background-color:#262626;}
-nav{display: flex;align-items: center;align-self: center;height: 50px;justify-content: space-between;max-width: 70rem;margin: 0 auto;}
-nav a{text-decoration: none;margin-right: 1em;color: #f0f7ee;font-size: 1em;}
-.nav-items-wrapper{border-bottom: 1px solid #3d3d3d;}
-nav a:hover{color: #a6d9f7;}
-#container{display: block;height: 100%;}
-#content{font-size: 16px;width: 35%;margin: 0 auto;height: 100%;display:flex;align-items: center;flex-direction: column;}
-p,a{margin: 1em;}
-h3{margin: 1em;color: #fff;font-weight: normal;}
-hr{color: rgb(150, 150, 150); width: 100%;}
-#logo{margin-left: 16px;}
-@media only screen and (max-width: 960px) {
-    #content {
-        width: 100%;
-    }
+/* CUSTOM PROPERTIES */
+:root {
+    --link-blue: #1076eb;
+    --link-blue-hover: #0d62c4;
+    --improved-white: #f0f7ee;
+    --background-gray: #262626;
+    --lighter-gray: #3d3d3d;
 }
+/* BASE: Probably wanted for every page */
+body {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--background-gray);
+    color: var(--improved-white);
+    font-family: Arial, sans-serif, Helvetica;
+    font-size: 1.05em;
+    line-height: 1.5;
+}
+
+header {
+    border-bottom: 1px solid var(--lighter-gray);
+    padding: 2rem 1.5rem;
+    margin: -2rem calc(0px - (50vw - 50%)) 2rem;
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%); 
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1.0rem 0;
+}
+
+p {
+    margin: 0 0 1.0rem 0;
+}
+
+a, a:visited {
+    color: var(--link-blue);
+}
+a:hover {
+    color: var(--link-blue-hover);
+}
+small {
+    display: block;
+}
+hr {
+    border: 1px solid var(--lighter-gray);
+    margin: 1.5rem 0 1.5rem 0;
+}
+/* INPUT */
