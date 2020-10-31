@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load markdown_deux_tags %}
+{% block body %}
+<h3>New post</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Send message">
+</form>
+{% endblock %}

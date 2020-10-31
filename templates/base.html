@@ -9,17 +9,20 @@
 </head>
 <body>
   <div id="container">
-      <div class="nav-items-wrapper">
-          <nav>
-              <div id="logo">
-                uBlog
-              </div>
-          </nav>
-      </div>
-      <div id="content">
-          {% block body %}
-          {% endblock %}
-      </div>
+    <header>
+      <h1>
+        uBlog
+      </h1>
+      <nav>
+        <a href="#">Lorem</a> |
+        <a href="#">Ipsum</a> |
+        <a href="#">Dolor</a>
+      </nav>
+    </header>
+    <div id="content">
+      {% block body %}
+      {% endblock %}
+    </div>
   </div>
 </body>
 
