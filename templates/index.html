@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% block body %}
-{% for post in object_list %}
-    <a href="{% url 'post-view' slug=post.slug %}">{{ post.created_at|date:"Y-m-d" }}: {{ post.title }}</a>
-    <hr />
-{% endfor %}
+    {% for post in object_list %}
+        <small>{{ post.created_at|date:"Y-m-d" }} | 0 comment(s)</small>
+        <a href="{% url 'post-view' slug=post.slug %}">
+            <big>{{ post.title }}</big>
+        </a>
+        <small>#django #python #opensource</small>
+        <hr />
+    {% endfor %}
 {% endblock %}
